@@ -27,7 +27,6 @@ public class Main extends JavaPlugin implements Listener {
     public HashMap<UUID, UUID> versing = new HashMap<UUID, UUID>();
     public void onEnable() {
         api = new API(this);
-        getConfig().options().copyDefaults(true);
         saveDefaultConfig();
         this.getServer().getPluginManager().registerEvents(this, this);
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new BukkitRunnable() {
